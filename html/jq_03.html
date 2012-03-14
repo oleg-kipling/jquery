@@ -1,0 +1,71 @@
+<html>
+	<head><meta charset=utf-8> 
+		<title>DOM, CSS, JQuery Methods for DOM, styling,
+			
+			ul.emphasys > li / ul.emphasys li, .children('').css('')
+			.div,  parent(), parents(), closests(), removeClass();
+			.children(), nth - child(n), next(), prev(), text(); 
+	       		first-child, .find(), addClass()
+		</title>
+		
+		<style>	
+			.container{color:green}	
+		</style>	
+	</head>
+	<body>
+	<div class="container">
+		<h1>Welcome to my website</h1>
+		
+		<p>Suspendisse erat lectus, molestie quis aliquet nec, luctus ut erat. 
+		Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+		Suspendisse tincidunt urna augue. Aenean porta vulputate libero, ut dapibus ante cursus lacinia.
+		Maecenas dignissim adipiscing lectus vel pretium. Cras a urna velit. 
+		Donec condimentum tincidunt dolor vitae fringilla. Mauris at suscipit turpis.
+		</p>
+	<ul class="emphasis">
+		<li>hello</li>
+		<li>hello2</li>
+		<li>
+			<ul>
+				<li>Item witout color</li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script>
+		
+		//.div,  parent(), parents(), closests(), removeClass();
+		//	$('li').closests('div.container').removeClass('container');
+		//	$('li').parents('.container').removeClass('container');
+		//	$('li').parent('ul').removeClass('emphasis');
+		//	$('li').parent().removeClass('emphasis');
+
+
+		//styling
+		//	$('ul.emphasis')
+		//		.children('li')
+		//		.eq(1)				
+		//		.next().text('added with JQuery');
+
+		//.children()nth - child(n), next(), prev(), text(); 
+		//	$('ul.emphasis').children('li:nth-child(2)').text('added with JQuery');
+		//	$('ul.emphasis').children('li').eq(2).text('added with JQuery');
+		//	$('ul.emphasis').children('li').eq(1).next().text('added with JQuery');
+		//	$('ul.emphasis').children('li').prev().addClass('emphasis');
+		//	$('ul.emphasis li:nth-child(3)').text('added with JQuery');
+
+		//jq method for css selectors .children()
+		//	$('ul.emphasis').children('li:first').addClass('emphasis');
+		//	$('ul.emphasis').children('li').first().addClass('emphasis');
+		
+		//just css selectors first-child, .find(), addClass()
+		//	$('ul.emphasis').find('li:ntf-child(1)').addClass('emphasis');
+		//	$('ul.emphasis').('li:first-child').addClass('emphasis');
+		
+		//just a children ul.emphahis, not another ul
+		//	$('ul.emphasis').children('li').css('color','green');
+	</script>		
+	</body>
+
+</html>
