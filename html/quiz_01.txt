@@ -1,0 +1,22 @@
+1. Short referefce for JQuery() = $;
+2. The jQuery function accepts a CSS selector, which is used to query the DOM for the applicable elements. True.
+3. Query the DOM for the div with an id of container and store a reference to it ("cache it") in a variable, called container
+	var container = $('div.container');
+4. Query the DOM for the ul, add a class of alternate.
+	$('ul').ddClass('alternate');
+7. Use jQuery's text method to update the <h1> element. Change it to "Updated."
+	$('h1').text("Updated");
+
+9. The box (or div) below has a class of box. Listen for when this box is clicked. When it is, remove the box class. Hint: you will want to use jQuery's on() method.
+	$('div.box').on(click).removeClass('box');
+10. Imagine that you've selected one list item, and now need to select all other list items on that same level. Which method should use to accomplish this?
+	children();
+11. Select the fourth list item below, and use the css method to set its background color to 'gray'.
+
+<style>
+.gray {
+   background-color:gray;
+}
+</style>
+   
+   $('li:ntf-child(4)').addClass('gray');
