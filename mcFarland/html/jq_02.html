@@ -1,0 +1,36 @@
+<html>
+	<head> 
+		<title>Jq in <head>, :first-child,function myFunc(){} = function $(){}, $(document).ready(function{}) = $(function(){}) </title>
+		
+		<style>
+		.emphasys {color:green;}
+		</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+
+	<script>
+		//	var functionName = function (){};
+		//	$(document).ready(functionName)
+		//	$('li:first-child').addClass('emphasys');
+
+		$(function(){
+			$('li:first-child').addClass('emphasys');
+		});
+
+		//$(document).ready(function(){
+		//	$('li:first-child').addClass('emphasys');
+		//});
+
+		//function myFunc(){}; = function $(){};	$();
+	
+	</script>		
+	</head>
+
+	<body>
+	<ul>
+		<li>hello</li>
+		<li>hello2</li>
+		<li>hello3</li>
+	</ul>
+	</body>
+
+</html>
