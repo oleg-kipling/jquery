@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Tuts+ Lessons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="js/custom_index.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      $('.close-btn').click(function() {
+        $('.slider').slideUp();
+      });
+      $('.open-btn').click(function() {
+        $('.slider').slideDown();
+      });
+
+      $('.toggle-btn').click(function(){
+        $('.slider').slideToggle();
+      });
+
+    });
+  </script>
+
+</head>
+<body>
+  <button class="close-btn">Slide Up</button>
+  <button class="open-btn">Slide Down</button>
+  <button class="toggle-btn">Slide Toggle</button>
+  <p class="slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, debitis, fugit totam incidunt pariatur fugiat beatae, rem ratione consequatur reiciendis, dolores. Neque qui dolores molestias, aliquid repellendus molestiae deleniti, id labore vitae illum amet est iusto error fuga, corporis. Deserunt est in, laborum repellat excepturi, magni animi.</p>
+   <p class="second">Nam provident dignissimos, deserunt aut esse officiis molestias possimus aperiam magni enim consequuntur corporis quia voluptatem non ut tempore blanditiis, minus, delectus cumque voluptates. Consequuntur dicta aspernatur possimus delectus, culpa esse impedit quasi, est aliquam! Rerum minima reiciendis corporis neque, laboriosam consequuntur sunt incidunt vero assumenda harum vel, quaerat! Aliquam ad est obcaecati quis, vero, ipsa! </p>
+</body>
+</html>
