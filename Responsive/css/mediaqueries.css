@@ -1,0 +1,71 @@
+/* IE10+ VIEWPORT FIX */
+
+@-ms-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+/* PHONE - 1024px */
+@media screen and (max-width:1024px){
+	.image-grid-square {
+		width: 25%;
+	}
+
+	.form-section {
+		width: 50%;
+	 }
+
+	.message-section,
+	.submit-section {
+		width: 100%;
+	}
+}
+/* PHONE - 767px */
+@media screen and (max-width:767px) {
+
+	.nav-menu {
+		float: right;
+		color:#F9F9F9;
+		display: block;
+		padding: 20px 10px;
+		cursor: pointer;
+	}
+	.nav-list {
+		float: left;
+		width: 100%;
+		overflow: hidden;
+		height: 0;
+	}
+	.nav-open {
+		height: auto;
+	}
+	.nav-list li {
+		width: 100%;
+	}
+
+	.container p {
+		.columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		-o-columns: 1;
+		-ms-columns: 1;
+	}
+
+	.image-grid-square {
+		width: 50%;
+	}
+
+	.message-section,
+	.submit-section {
+		width: 100%;
+	}
+
+	.form-section {
+		width: 100%;
+	}
+}
+
+/* PHONE - 400px */
+@media screen and (max-width:400px) {
+	.image-grid-square {
+		width: 100%;
+	}
+}
