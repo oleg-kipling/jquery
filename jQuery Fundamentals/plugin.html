@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A simple jQuery plugin</title>
+</head>    
+<body>
+    <p>Make me editable!</p>
+    <p>Make me editable also!</p>
+    <script src="jquery-2.1.0.min.js"></script>
+    <script src="jquery.makeeditable.js"></script>
+    <script>
+        $('p').click(function() {
+           console.log('some other handler'); 
+        });
+        $('p').makeEditable(true, { clearText: true });
+    </script>
+</body>
+</html>

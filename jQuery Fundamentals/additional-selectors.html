@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Additional jQuery Selectors</title>
+    <style>
+        span { display: block; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3
+                <ul>
+                    <li>Subitem 1</li>
+                    <li>Subitem 2</li>
+                    <li>Subitem 3</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <p>Sed e legam elit eram, ad commodo fidelissimae, eiusmod noster offendit admodum, 
+        cillum ullamco philosophari, de ubi varias labore lorem, enim litteris ingeniis 
+        qui laboris illustriora sed mentitum, qui ut quae quibusdam.</p><span>This one</span>
+    <span class="not">Not this one</span>
+    <span>This one also</span>
+    <label>Radio 1</label><input type="radio" id="radio1" name="radioset" checked="true"/>
+    <label>Radio 2</label><input type="radio" id="radio2" name="radioset"/>
+    <label>Radio 3</label><input type="radio" id="radio3" name="radioset"/><br/>
+    <input disabled="true" value="disabled" />
+    <script src="jquery-2.1.0.min.js"></script>
+</body>
+</html>

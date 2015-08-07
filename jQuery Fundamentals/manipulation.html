@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation</title>
+    <style>
+        .tag { display:inline-block; padding:5px 10px 6px 5px; border:1px solid #000; font:12px sans-serif; }
+        .tag a { display:inline-block; margin-right: 2px; text-decoration:none; color:red; font-size:14px; font-weight:bold; line-height:16px; }
+    </style> 
+</head>
+<body>
+    <h1>The title of the document</h1>
+    <span class="tag"><a href="#" title="Close this thing">x</a> Remove me!</span>
+    <p class="tag"><a href="#" title="Close this thing">x</a> Remove me!</p>
+    <div id="parent">
+        <p>A child element</p>
+        <p>A child element</p>
+        <p>A child element</p>
+    </div>
+    <script src="jquery-2.1.0.min.js"></script>
+</body>
+</html>

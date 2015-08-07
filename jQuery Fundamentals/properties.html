@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Properties of the jQuery object</title>
+    <style>
+        #animatee { width: 200px; height: 200px; position: relative; background-color: lightgreen }
+    </style>
+</head>
+<body>
+    <button id="animator">Animate it</button>
+    <div id="animatee"></div>
+    <script src="jquery-2.1.0.min.js"></script>
+    <script>
+        $('#animator').on('click', function () {
+            
+            $('#animatee').animate({
+                left: '+=200',
+                easing: 'linear'
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

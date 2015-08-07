@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery events</title>
+    <style>
+        #tabs { width: 300px; height: 100px; border: 1px solid #000; margin-top: 40px; position: relative; }
+        #tabs a { position: absolute; top: -25px; border: 1px solid #000; padding: 0 4px 3px; left: -1px; }
+        #tabs a[href="#tab2"] { left: 50px; }
+        #tabs div { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+        #tabs #tab2 { display: none; }
+    </style>
+</head> 
+<body>
+    <button>Click me</button>
+    <a href='#something'>A link</a>
+    <select id="mySelectBox">
+        <option>jQuery</option>
+        <option>jQuery UI</option>
+        <option>jQuery Mobile</option>
+    </select>
+    <div id="tabs">
+        <a href="#tab1">Tab 1</a>
+        <a href="#tab2">Tab 2</a>
+        <div id="tab1">
+            <p>This is tab 1</p>
+        </div>
+        <div id="tab2">
+            <p>This is tab 2</p>
+        </div>
+    </div>
+    <script src="jquery-2.1.0.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            console.log('Document is ready');
+            
+            $('#tabs').on('click', 'a', function() {
+                var a = $(this),
+                    target = $(a.attr('href'));
+                
+                a.parent().find('div').hide();
+                target.show(function() {
+                    a.trigger('tabchange', [target]);
+                });
+            });
+            
+            $('#tabs').on('tabchange', 'a', function(e, newTab) {
+                console.log('The tab changed!', e);
+                console.log('the new tab is: ', newTab);
+            });
+        });
+    </script>
+</body>
+</html>

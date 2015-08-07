@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM traversal: tree navigation</title>
+</head>
+<body>
+    <section role="main">
+        <div id="app">
+            <header>
+                <h1>A main heading</h1>
+                <h2>A tagline</h2>
+            </header>
+            <div class="inner-container">
+                <p>Some short intro text</p>
+                <div class="sub-container">
+                    <p class="main">Main text 1</p>
+                    <p class="main">Main text 2</p>
+                    <p class="main other">Main text 3</p>
+                    <p class="main">Main text 4</p>
+                </div>
+            </div>
+            <div class="inner-container">
+                <p>Some short intro text</p>
+            </div>
+            <div class="inner-container"></div>
+        </div>
+    </section>
+    <script src="jquery-2.1.0.min.js"></script>
+</body>
+</html>

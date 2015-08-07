@@ -1,0 +1,1 @@
+window.alert('hello from the script file!');

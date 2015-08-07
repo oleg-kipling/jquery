@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Core methods</title>
+</head>      
+<body>
+    <script src="prototype.js"></script>
+    <script src="jquery-2.1.0.min.js"></script>
+    <script>
+        $.noConflict();
+        console.log($);
+        jQuery.holdReady(true);
+        jQuery(function($) {
+            console.log($);
+        });
+    </script>
+</body>
+</html>
