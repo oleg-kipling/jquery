@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Использование условных выражений</title>
+<link href="../_css/site.css" rel="stylesheet">
+<script>
+var счастливоеЧисло = prompt('Какое ваше счастливое число? ', '');
+счастливоеЧисло = parseInt(счастливоеЧисло, 10);
+if (isNaN(счастливоеЧисло)) {
+  счастливоеЧисло = prompt('Пожалуйста, сообщите мне свое счастливое число.','');
+}
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="header">
+    <p class="logo">JavaScript <i>и</i> jQuery <i class="mm">Недостающее<br>Руководство</i></p>
+  </div>
+  <div class="content">
+    <div class="main">
+      <h1>Использование условных выражений</h1>
+      <script>
+		if (счастливоеЧисло == 7 ) {
+		  document.write("<p>Эй, 7 — это и мое счастливое число!</p>");
+		} else if (счастливоеЧисло == 13 || счастливоеЧисло == 24) {
+		  document.write("<p>Ой. " + счастливоеЧисло + "? Это — несчастливое число!");
+		} else {
+		  document.write("<p>Число " + счастливоеЧисло + " является для вас счастливым!</p>");
+		}
+	  </script> 
+    </div>
+  </div>
+  <div class="footer">
+    <p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+  </div>
+</div>
+</body>
+</html>

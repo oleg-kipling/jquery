@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Создание и использование массивов</title>
+<link href="../_css/site.css" rel="stylesheet">
+<script>
+var писатели = [ ' Лев Толстой',
+			     ' Николай Гоголь',
+			     ' Иван Тургенев',
+			     ' Антон Чехов'
+			   ];
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="header">
+    <p class="logo">JavaScript <i>и</i> jQuery <i class="mm">Недостающее<br>Руководство</i></p>
+  </div>
+  <div class="content">
+    <div class="main">
+      <h1>Создание и использование массивов</h1>
+      <script>
+		document.write('<p>Первый автор — <strong>');
+		document.write(писатели[0] + '</strong></p>');
+		document.write('<p>Последний автор — <strong>');
+		document.write(писатели[писатели.length-1] + ' </strong></p> ');
+		писатели.unshift('Жюль Верн');
+		document.write('<p>Чуть не забыл, <strong>');
+		document.write(писатели[0]);
+		document.write('</strong></p>');
+
+	  </script>
+     </div>
+  </div>
+  <div class="footer">
+    <p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Использование функции .delegate()</title>
+<link href="../_css/site.css" rel="stylesheet">
+<style>
+.add {
+	display: inline-block;
+	background-color: rgba(255,255,255,.8);
+	font-size: 12px;
+	padding: 0 5px;
+	margin-left: 10px;
+	color: black;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.add:hover {
+	color: rgb(102,102,102);
+	background-color: rgb(204,255,0);	
+}
+</style>
+<script src="../_js/jquery-1.6.3.min.js"></script>
+<script>
+$(document).ready(function() {
+   // использование функции bind
+   $('#without .add').bind('click',function() {
+	   var $this = $(this);
+	   var $parent = $this.parent();
+	   $parent.after($parent.clone());
+	   $this.remove();	   
+   }); // конец bind
+   
+   //использование функции delegate
+   $('#with').delegate('.add','click',function() {
+	   var $this = $(this);
+	   var $parent = $this.parent();
+	   $parent.after($parent.clone());
+	   $this.remove();	   
+   }); //конец delegate
+}); // конец ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<p class="logo">JavaScript <i>и</i> jQuery <i class="mm">Недостающее<br>Руководство</i></p>
+	</div>
+	<div class="content">
+	  <div class="main">
+	    <h1>Использование функции .delegate()</h1>
+        <div id="without">
+        <h2>С функцией Bind (работает только в первый раз)</h2>
+        <p>Элемент <span class="add">добавить новый элемент</span></p>   
+        </div>
+        <div id="with">
+        <h2>С функцией Delegate (продолжает добавлять элементы)</h2>
+        <p>Элемент <span class="add">добавить новый элемент</span></p>   
+        </div>
+  </div>
+	<div class="footer">
+		<p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+	</div>
+</div>
+</body>
+</html>

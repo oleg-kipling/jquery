@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Отображение времени</title>
+<link href="../_css/site.css" rel="stylesheet">
+<script src="printTime.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<p class="logo">JavaScript <i>и</i> jQuery <i class="mm">Недостающее<br>Руководство</i></p>
+	</div>
+	<div class="content">
+		<div class="main">
+			<h1>Отображение времени</h1>
+			<p>Сейчас: <strong>
+  <script type="text/javascript">
+	document.write(printTime(true));
+	</script>
+  </strong></p>
+			<div id="headlines"></div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+	</div>
+</div>
+</body>
+</html>

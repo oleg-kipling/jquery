@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Quiz</title>
+	<script>
+	var score = 0;
+	var quiestions = [
+		['Сколько лун у планеты Земля?', 1],
+		['Сколько лун у Сатурна?', 31],
+		['Сколько лун у Венеры?', 0]
+	];
+
+	function askQuestion(quiestion) { // one arg
+		var answer = prompt(quiestion[0], '');
+		if (answer == quiestion[1]) {
+			alert('Верно!');
+			score++;
+		} else {
+			alert('Неверно! Правильный ответ ' + quiestion[1]);
+		}
+	}
+
+	for (var i=0; i<quiestions.length; i++) {
+		askQuestion(quiestions[i]);
+	}
+	</script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <p class="logo">JavaScript <i>и</i> jQuery <i class="mm">Недостающее<br>Руководство</i></p>
+  </div>
+  <div class="content">
+    <div class="main">
+      <h1>Простая викторина</h1>
+      <script>
+		var Message = 'Вы ответили правильно на ' + score;
+		Message += ' из ' + quiestions.length;
+		Message += ' вопросов.';
+		document.write('<p>' + Message + '</p>');	
+	  </script>
+      </div>
+  </div>
+  <div class="footer">
+    <p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+  </div>
+</div>
+</body>
+</html>

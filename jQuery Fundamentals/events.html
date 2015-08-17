@@ -31,22 +31,20 @@
     </div>
     <script src="jquery-2.1.0.min.js"></script>
     <script>
-        jQuery(document).ready(function($) {
+        jQuery(function($) {
             console.log('Document is ready');
             
             $('#tabs').on('click', 'a', function() {
                 var a = $(this),
                     target = $(a.attr('href'));
-                
                 a.parent().find('div').hide();
-                target.show(function() {
+                target.show(function(){
                     a.trigger('tabchange', [target]);
                 });
             });
-            
-            $('#tabs').on('tabchange', 'a', function(e, newTab) {
-                console.log('The tab changed!', e);
-                console.log('the new tab is: ', newTab);
+
+            $('#tabs').on('tabchange', 'a', function(e, newtab){
+                console.log('The tab changed!', newtab);
             });
         });
     </script>

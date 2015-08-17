@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Использование функций .prevAll() и .nextAll()</title>
+<link href="../_css/site.css" rel="stylesheet">
+<style>
+.button {
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	float: left;	
+	margin-right: 20px;
+}
+</style>
+<script src="../_js/jquery-1.6.3.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.button').click(function() {
+	  var $this=$(this)
+	  $this.css({
+		  'backgroundColor':'red',
+		  'opacity' : 1
+	  });
+	  $this.siblings('.button').css('backgroundColor','white');
+	  $this.prevAll('.button').fadeTo(250,.5);
+	  $this.nextAll('.button').fadeTo(250,1);
+  }); // конец mouseOver
+}); // конец ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<p class="logo">JavaScript <i>и</i> jQuery <i class="mm">Недостающее<br>Руководство</i></p>
+	</div>
+	<div class="content">
+	  <div class="main">
+	    <h1>Использование функций .prevAll и .nextAll()</h1>
+        <p>Щелкните по одному из квадратов</p>
+           <div class="button"></div>
+           <div class="button"></div>
+           <div class="button"></div>
+           <div class="button"></div>
+           <div class="button"></div>
+           <div class="button"></div>
+           <div class="button"></div>
+           <div class="button"></div>
+           <div class="button"></div>
+           <div class="button"></div>
+           <div class="button"></div>
+           
+	  </div>
+  </div>
+	<div class="footer">
+		<p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+	</div>
+</div>
+</body>
+</html>

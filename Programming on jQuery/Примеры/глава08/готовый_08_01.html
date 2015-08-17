@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Открытие страницы внутри страницы</title>
+<link href="../_css/site.css" rel="stylesheet">
+<link href="fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="../_js/jquery.easing.1.3.js"></script>
+<script src="fancybox/jquery.fancybox-1.3.4.min.js"></script>
+<script>
+$(document).ready(function() {
+	$('.iframe').fancybox({
+		width : '90%',
+		height : '90%',
+		titlePosition: 'outside'
+	});// конец fancybox
+}); // конец  ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+<div class="header">
+	<p class="logo">JavaScript <i>и</i> jQuery <i class="mm">Недостающее<br>Руководство</i></p>
+</div>
+
+
+<div class="content">
+	<div class="main">
+		<h1>Просмотрите ссылки на этой странице!</h1>
+	<ul>
+    <li><a href="http://www.yandex.ru/" class="iframe" title="Yandex">Yandex</a></li>
+    <li><a href="http://www.yahoo.com/" class="iframe" title="Yahoo!">Yahoo!</a></li>
+    <li><a href="http://www.ozon.ru/" class="iframe" title="OZON.ru">OZON.ru</a></li>
+    <li><a href="http://www.now.ru/" class="iframe" title="Now.ru">Now.ru</a></li>
+    <li><a href="http://www.univertv.ru/" class="iframe" title="Univertv.ru">Univertv.ru</a></li>
+  </ul>
+	</div>
+</div>
+<div class="footer">
+<p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+</div>
+</div>
+</body>
+</html>

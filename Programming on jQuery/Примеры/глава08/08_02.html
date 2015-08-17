@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Простое анимированное меню навигации</title>
+<link href="../_css/site.css" rel="stylesheet">
+<style>
+#navigation ul, #navigation li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#navigation a {
+	background-color: rgb(204,204,204);
+	text-decoration: none;
+	font: 16px 'ColaborateLightRegular', Arial, sans-serif;
+	text-indent: 10px;
+	border-top: 1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #999;
+	border-bottom:1px solid #999;
+	margin: 0px;
+	padding: 0px;
+	color: rgb(53,75,118);
+}
+
+#navigation a:hover {
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background-color: #555;
+	color: white;
+}
+
+#navigation .stack > a {
+	background-image: url(images/arrow.png);
+	background-repeat: no-repeat;
+	background-position: 97% 8px;
+}
+#navigation .stack > a:hover {
+	background-position: 97% -78px;	
+}
+
+#navigation ul .stack > a {
+	background-position: 97% -21px;
+}
+
+#navigation ul .stack > a:hover {
+	background-position: 97% -54px;
+}
+</style>
+<script src="../_js/jquery-1.6.3.min.js"></script>
+
+<script>
+$(document).ready(function() {
+
+}); // end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <p class="logo">JavaScript <i>и</i> jQuery <i class="mm">Недостающее<br>Руководство</i></p>
+  </div>
+  <div class="content">
+    <div class="main">
+      <h1>Меню навигации</h1>
+      <ul id="navigation" >
+        <li><a href="#">Домой</a></li>
+        <li><a href="#">О нас</a>
+          <ul>
+            <li><a href="#">Наша история</a></li>
+            <li><a href="#">Как нас найти</a></li>
+            <li><a href="#">Часы работы</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Наши товары</a>
+          <ul>
+            <li><a href="#">Штуковины</a>
+              <ul>
+                <li><a href="#">Простая штуковина</a></li>
+                <li><a href="#">Стандартная штуковина</a></li>
+                <li><a href="#">Продвинутая штуковина</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Гаджеты</a>
+              <ul>
+                <li><a href="#">Простой гаджет</a></li>
+                <li><a href="#">Стандартный гаджет</a></li>
+                <li><a href="#">Продвинутый гаджет</a>
+                  <ul>
+                    <li><a href="#">Продвинутый гаджет А</a></li>
+                    <li><a href="#">Продвинутый гаджет Б</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Машины времени</a></li>
+          </ul>
+        </li>
+      </ul>
+      <p style="clear:both;padding-top: 20px;" >Пример простого меню навигации, созданного с помощью библиотеки jQuery и плагина Navigation.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+  </div>
+</div>
+</body>
+</html>
